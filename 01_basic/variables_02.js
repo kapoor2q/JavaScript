@@ -14,3 +14,12 @@ console.log(3+3)
 
 console.log(typeof undefined)//undefine
 console.log(typeof null)//object
+
+let score=1;
+test();
+function test()
+{
+let score=5;
+console.log(score)
+}
+console.log(score)
