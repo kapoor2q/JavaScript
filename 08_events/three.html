@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Code With Kapoor</h1>
+    <button id="start">start</button>
+    <button id="stop">Stop</button>
+
+</body>
+<script>
+//     setInterval(function(){
+//    console.log("kapoor",Date.now())
+//     },1000)
+//////create start and stop time inerval print log//////
+// const sysdate=function(str){
+//    console.log(str,Date.now())
+//     }
+//     let intervalid=0;
+//     document.querySelector("#start").addEventListener("click",function(){
+//          intervalid= setInterval(sysdate,1000,"hi")
+//     })
+// document.querySelector("#stop").addEventListener("click",function(){
+//     clearInterval(intervalid)
+// })
+//////create start and stop time inerval background chnage//////
+const randomcolor=function(){
+    const hex='0123456789ABCDEF'
+   let color='#'
+   for (let index = 0; index < 6; index++) {
+    color+=hex[Math.floor(Math.random()*16)]
+  
+   }
+   console.log(color)
+   return color;
+};
+//////Set Color//////////
+const backcolorset=function(){
+   document.body.style.backgroundColor=randomcolor()
+}
+//////start interval///////////////
+let intervalid=0;
+document.querySelector("#start").addEventListener("click",function(){
+if(!intervalid)
+intervalid= setInterval(backcolorset,1000)
+})
+    /// clear interval
+document.querySelector("#stop").addEventListener("click",function(){
+ clearInterval(intervalid);
+ intervalid=null;
+})
+
+</script>
+</html>
