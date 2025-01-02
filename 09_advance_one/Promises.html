@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const promisone=new Promise(function(resolve,reject){
+//Do an asynk task
+//DB calls, cryptography,network
+setTimeout(() => {
+    console.log("Asynk task is compelete")
+    resolve()///connect to then
+}, 1000);
+})
+
+promisone.then(()=>{
+    console.log("Promises Comsume");
+})
+</script>
+</html>
